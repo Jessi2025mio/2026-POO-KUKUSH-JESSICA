@@ -4,33 +4,32 @@
 **Asignatura:** Programación Orientada a Objetos - Semana 7  
 
 ## Descripción del Sistema
-Este proyecto es una aplicación modular de consola desarrollada en Python que simula la administración interna de un restaurante. Permite gestionar dinámicamente dos entidades esenciales: **Productos** y **Clientes**, procesando datos del mundo real ingresados por teclado para transformarlos de forma transparente en objetos de software estructurados y validados.
+Este proyecto consiste en una aplicación modular de consola desarrollada en Python que simula el control interno de un restaurante. Su objetivo principal es gestionar de manera dinámica las entidades de **Productos** y **Clientes**, procesando datos reales ingresados por el usuario desde el teclado para transformarlos en objetos de software estructurados, validados y encapsulados.
 
 ---
 
 ## Estructura del Proyecto y Capas
-El código sigue un patrón de arquitectura limpia dividida por responsabilidades:
+El proyecto se encuentra organizado siguiendo una arquitectura limpia dividida estrictamente por responsabilidades:
 
-- **`modelos/`**: Capa de entidades de datos puras (`Producto` y `Cliente`).
-- **`servicios/`**: Capa lógica encargada del negocio (`Restaurante`), donde se administran y centralizan los datos.
-- **`main.py`**: Interfaz de usuario (Consola) y orquestador del flujo del programa.
+- **`modelos/`**: Aloja las entidades de datos puras del negocio (`Producto` y `Cliente`).
+- **`servicios/`**: Contiene la capa de lógica empresarial (`Restaurante`), encargada de centralizar las listas y operaciones de búsqueda o registro.
+- **`main.py`**: Funciona como la interfaz de usuario en consola y orquestador del flujo total del programa.
 
 ---
 
-## Conceptos POO Aplicados
+## Conceptos de POO Aplicados
 
 ### 1. Constructor Tradicional `__init__`
-Implementado en la clase `Producto`. Se encarga de instanciar y asignar los estados iniciales del objeto de forma controlada a través de parámetros explícitos, garantizando que todo objeto empiece con un estado válido.
+Implementado en la clase `Producto`. Se utiliza para instanciar los objetos y definir sus estados iniciales de forma explícita mediante parámetros, garantizando que cada producto nazca con la estructura requerida.
 
-### 2. Control de Atributos mediante `@property` y `@setter`
-Utilizados en `Producto` para cumplir con el principio de encapsulación. Los modificadores `@setter` actúan como compuertas lógicas impidiendo el registro de datos corruptos o incongruentes, tales como nombres o categorías vacías, o precios menores/iguales a 0.
+### 2. Encapsulación mediante `@property` y `@setter`
+Aplicado detalladamente en la clase `Producto`. Los métodos modificadores (`@setter`) actúan como filtros de validación obligatorios que impiden la corrupción de datos, bloqueando el registro de nombres o categorías vacías, o precios menores o iguales a cero.
 
 ### 3. Clases de Datos con `@dataclass`
-Implementado en la clase `Cliente`. Se aprovechan las bondades nativas de Python para declarar componentes de datos puros de forma ágil, autogenerando métodos implícitos útiles como el constructor inicial de manera limpia y legible.
+Implementado en la clase `Cliente`. Se aprovechan las bondades nativas de Python para generar de forma limpia estructuras de datos compactas, reduciendo el código repetitivo y autogenerando constructores legibles de forma automática.
 
-### 4. Menú Interactivo de Consola
-Permite una simulación en tiempo real. Captura el flujo ordenado:  
-`Ingreso por input() ➔ Constructor ➔ Creación del Objeto ➔ Guardado en Servicio ➔ Consulta`.
+### 4. Menú Interactivo y Flujo Dinámico
+El archivo principal maneja un ciclo continuo que interactúa con el usuario, captura los datos dinámicamente mediante `input()`, invoca los constructores de las clases para dar vida a los objetos y los transfiere a la capa de servicios para su almacenamiento en memoria.
 
 ---
 

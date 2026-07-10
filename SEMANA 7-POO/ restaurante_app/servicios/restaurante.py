@@ -1,7 +1,7 @@
 # servicios/restaurante.py
+from typing import List, Optional
 from modelos.producto import Producto
 from modelos.cliente import Cliente
-from typing import List, Optional
 
 class Restaurante:
     def __init__(self):

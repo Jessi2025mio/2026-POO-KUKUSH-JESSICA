@@ -2,7 +2,7 @@
 
 class Producto:
     def __init__(self, nombre: str, categoria: str, precio: float, disponible: bool = True):
-        # Se invocan directamente los setters para aplicar las validaciones desde la construcción
+        # Se invocan los setters para aplicar las validaciones desde el constructor
         self.nombre = nombre
         self.categoria = categoria
         self.precio = precio
@@ -50,7 +50,7 @@ class Producto:
     def disponible(self, valor: bool):
         self._disponible = valor
 
-    # Método para dar formato legible a los datos del producto
+    # Método para mostrar la información formateada del producto
     def mostrar_informacion(self) -> str:
         estado = "Disponible" if self._disponible else "Agotado"
         return f"Producto: {self._nombre} | Categoría: {self._categoria} | Precio: ${self._precio:.2f} | Estado: {estado}"

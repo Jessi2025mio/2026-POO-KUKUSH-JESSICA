@@ -12,16 +12,16 @@ def mostrar_menu():
     print("2. Listar productos")
     print("3. Buscar producto")
     print("----------------------------------------")
-    print("4. Registrar cliente")
+    print("4. Registrar cliente.py")
     print("5. Listar clientes")
-    print("6. Buscar cliente")
+    print("6. Buscar cliente.py")
     print("----------------------------------------")
     print("7. Salir")
     print("========================================")
 
 
 def ejecutar_sistema():
-    # Instancia única del servicio controlador
+    # Instancia del servicio encargado de la lógica del negocio
     servicio_restaurante = Restaurante()
 
     while True:
@@ -38,7 +38,7 @@ def ejecutar_sistema():
                 disponible_input = input("¿Está disponible? (S/N): ").strip().lower()
                 disponible = disponible_input != 'n'
 
-                # Creación dinámica del objeto mediante el constructor tradicional
+                # Creación del objeto usando el constructor tradicional de Producto
                 nuevo_producto = Producto(nombre, categoria, precio, disponible)
                 servicio_restaurante.registrar_producto(nuevo_producto)
                 print("¡Producto registrado con éxito!")
@@ -69,26 +69,26 @@ def ejecutar_sistema():
                 print("El producto solicitado no existe.")
 
         elif opcion == "4":
-            # Registrar un nuevo cliente
+            # Registrar un nuevo cliente.py
             print("\n--- Registrar Nuevo Cliente ---")
             id_cliente = input("Identificador único (Cédula/ID): ").strip()
             if not id_cliente:
-                print("El ID del cliente no puede estar vacío.")
+                print("El ID del cliente.py no puede estar vacío.")
                 continue
 
-            nombre = input("Nombre del cliente: ")
-            # Validación preventiva para que el nombre del cliente no esté vacío
+            nombre = input("Nombre del cliente.py: ")
+            # Validación para evitar nombres vacíos
             if not nombre.strip():
                 print("El nombre no puede estar vacío.")
                 continue
 
             correo = input("Correo electrónico: ")
-            # Validación preventiva para que el correo del cliente no esté vacío
+            # Validación para evitar correos vacíos
             if not correo.strip():
                 print("El correo no puede estar vacío.")
                 continue
 
-            # Creación dinámica de objeto usando el decorador @dataclass
+            # Creación del objeto Cliente usando el decorador @dataclass
             nuevo_cliente = Cliente(nombre, correo, id_cliente)
             servicio_restaurante.registrar_cliente(nuevo_cliente)
             print("¡Cliente registrado con éxito!")
@@ -104,15 +104,15 @@ def ejecutar_sistema():
                     print(cli.mostrar_informacion())
 
         elif opcion == "6":
-            # Buscar cliente por ID
+            # Buscar cliente.py por ID
             print("\n--- Buscar Cliente ---")
-            id_buscar = input("Ingrese el ID del cliente a buscar: ")
+            id_buscar = input("Ingrese el ID del cliente.py a buscar: ")
             cliente = servicio_restaurante.buscar_cliente(id_buscar)
             if cliente:
                 print("\nCliente Encontrado:")
                 print(cliente.mostrar_informacion())
             else:
-                print("El cliente solicitado no se encuentra registrado.")
+                print("El cliente.py solicitado no se encuentra registrado.")
 
         elif opcion == "7":
             print("\n¡Gracias por utilizar el Sistema de Restaurante! Saliendo...")
