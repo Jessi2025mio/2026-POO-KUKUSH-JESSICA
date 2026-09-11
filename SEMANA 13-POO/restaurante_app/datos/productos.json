@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hamburguesa Clásica",
+    "precio": 5.50,
+    "categoria": "Platos Fuertes",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "nombre": "Jugo Natural de Mora",
+    "precio": 1.75,
+    "categoria": "Bebidas",
+    "stock": 40
+  },
+  {
+    "id": 3,
+    "nombre": "Tarta de Chocolate",
+    "precio": 3.00,
+    "categoria": "Postres",
+    "stock": 12
+  }
+]
