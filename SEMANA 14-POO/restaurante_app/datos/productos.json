@@ -1,0 +1,14 @@
+[
+  {
+    "id_producto": "P001",
+    "nombre": "Hamburguesa Doble",
+    "categoria": "Comida Rapida",
+    "precio": 8.5
+  },
+  {
+    "id_producto": "P002",
+    "nombre": "Jugo Natural de Mora",
+    "categoria": "Bebidas",
+    "precio": 2.5
+  }
+]
