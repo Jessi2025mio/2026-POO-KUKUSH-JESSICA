@@ -1,0 +1,11 @@
+[
+  {
+    "id_venta": 1,
+    "id_usuario": 102,
+    "usuario_nombre": "Ana Gómez",
+    "id_producto": 3,
+    "producto_nombre": "Jugo Natural de Naranja",
+    "total": 2.5,
+    "fecha": "2026-09-24 15:51:40"
+  }
+]

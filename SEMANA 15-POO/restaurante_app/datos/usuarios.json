@@ -1,0 +1,5 @@
+[
+  {"id": 101, "nombre": "Carlos Mendoza", "rol": "Cliente"},
+  {"id": 102, "nombre": "Ana Gómez", "rol": "Cliente"},
+  {"id": 103, "nombre": "Admin Restaurante", "rol": "Administrador"}
+]

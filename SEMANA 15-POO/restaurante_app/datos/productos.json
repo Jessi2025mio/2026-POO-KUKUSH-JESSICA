@@ -1,0 +1,5 @@
+[
+  {"id": 1, "nombre": "Hamburguesa Doble", "precio": 8.50, "categoria": "Platos Principales"},
+  {"id": 2, "nombre": "Pizza Pepperoni", "precio": 12.00, "categoria": "Platos Principales"},
+  {"id": 3, "nombre": "Jugo Natural de Naranja", "precio": 2.50, "categoria": "Bebidas"}
+]
